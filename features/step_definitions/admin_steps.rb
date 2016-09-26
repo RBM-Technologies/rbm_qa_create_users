@@ -1,13 +1,13 @@
 Given(/^I am logged in as an admin$/) do
-  visit('https://www.tmobile-vmm-uat.aws.rbmtechnologies.com/view/login')
-  fill_in('Username', with: '<AdminUserName>')
-  fill_in('Password', with: '<AdminPassword>')
+  visit ('https://www.tmobile-vmm-uat.aws.rbmtechnologies.com/view/login')
+  fill_in('Username', with: 'test')
+  fill_in('Password', with: 'test')
   click('Login')
 end
 
 Given(/^I have a CSV file of user data$/) do
   @data = []
-  CSV.foreach("./user_data.csv", headers: true) do |row|
+  CSV.foreach("../user_data.csv", headers: true) do |row|
     @data << row
   end
 end

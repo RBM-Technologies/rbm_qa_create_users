@@ -1,3 +1,4 @@
+
 Feature: Create users from CSV file
   As an RBM Admin
   I can create new users
