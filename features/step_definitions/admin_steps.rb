@@ -1,5 +1,5 @@
 Given(/^I am logged in as an admin$/) do
-  visit('/root')
+  visit('https://www.tmobile-vmm-uat.aws.rbmtechnologies.com/view/login')
   fill_in('Username', with: '<AdminUserName>')
   fill_in('Password', with: '<AdminPassword>')
   click('Login')
