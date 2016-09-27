@@ -1,11 +1,10 @@
 source "https://rubygems.org"
 
-
-  gem 'cucumber'
-  gem 'capybara'
-  gem 'rspec'
-  gem 'selenium-webdriver'
-  gem 'capybara-webkit'
-  gem 'launchy'
-  gem 'pry'
-  gem 'byebug'
+gem 'cucumber'
+gem 'capybara'
+gem 'rspec'
+gem 'selenium-webdriver'
+gem 'capybara-webkit'
+gem 'launchy'
+gem 'pry'
+gem 'byebug'

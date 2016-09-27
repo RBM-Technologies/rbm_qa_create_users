@@ -9,13 +9,12 @@ Getting Started
 
   Pull down the repo from github.com/mobremski/rbm_qa_create_users.
   Open the directory in your terminal and your preferred text editor.
-  Install cucumber with `gem install cucumber` from that directory.
-  Run `bundle install`.
+  Install cucumber with `gem install cucumber` in the terminal from that directory.
+  Run `bundle install` in the terminal from that directory.
 
 Running the Test
 
-  Populate the first line of the file `admin_data.csv` with the credentials of
-    an RBM Admin.
+  In the text editor, populate the first line of the file `admin_data.csv` with the credentials of an RBM Admin.
   Populate the file `user_data.csv` with the user data you would like to add
     to the database.
   In the terminal, from the root directory, run `bundle exec cucumber`.

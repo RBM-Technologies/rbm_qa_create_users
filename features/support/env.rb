@@ -1,13 +1,3 @@
-# require 'rubygems'
-# require 'capybara'
-# require 'capybara/cucumber'
-
-# Capybara.configure do |config|
-#   config.default_driver = :selenium
-#   config.app_host   = 'https://www.tmobile-vmm-uat.aws.rbmtechnologies.com/view/login'
-# end
-# World(Capybara)
-
 begin require 'rspec/expectations'; rescue LoadError; require 'spec/expectations'; end
 require 'capybara'
 require 'capybara/dsl'
@@ -17,5 +7,14 @@ require 'csv'
 require 'launchy'
 require 'pry'
 
+Capybara.configure do |config|
+  config.app_host = 'https://tmobile-vmm-qa.aws.rbmtechnologies.com'
+end
+
+Capybara::Webkit.configure do |config|
+  config.allow_url("tmobile-vmm-qa.aws.rbmtechnologies.com")
+end
+
 Capybara.default_driver = :webkit
 Capybara.javascript_driver = :webkit
+Capybara.run_server = false

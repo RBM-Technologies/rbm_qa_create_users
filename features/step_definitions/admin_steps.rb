@@ -13,28 +13,27 @@ Given(/^I have a CSV of RBM Admin credentials$/) do
 end
 
 Given(/^I am logged in as an admin$/) do
-  visit('https://tmobile-vmm-qa.aws.rbmtechnologies.com/view/login')
+  visit('/')
   fill_in('Username', with: @admin_data[0]['username'])
   fill_in('Password', with: @admin_data[0]['password'])
   click_on('Login')
 end
 
 When(/^I go to the new user form page$/) do
-  visit('https://tmobile-vmm-qa.aws.rbmtechnologies.com/setup')
+  visit('/setup')
   click_on('Security')
   click_on('Users')
   click_on('New User')
-  save_and_open_page
 end
 
 When(/^I fill in the new user form$/) do
   @data.each do |row|
     fill_in('user_login', with: row['username'])
-    fill_in('user_password', with: "#{row['password']}")
-    fill_in('user_password_confirmation', with: "#{row['password']}")
-    fill_in('user_email', with: "#{row['email']}")
-    fill_in('user_firstname', with: "#{row['firstname']}")
-    fill_in('user_lastname', with: "#{row['lastname']}")
+    fill_in('user_password', with: row['password'])
+    fill_in('user_password_confirmation', with: row['password'])
+    fill_in('user_email', with: row['email'])
+    fill_in('user_firstname', with: row['firstname'])
+    fill_in('user_lastname', with: row['lastname'])
     find(:css, "#user_role_ids_[value='#{value_for(row['role'])}']").set(true)
     click_on('Create')
     click_on('New User')
