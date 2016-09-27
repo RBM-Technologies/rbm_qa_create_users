@@ -7,7 +7,7 @@ User Creation Feature Test and Automated Script for Populating Users in QA Datab
 
 Getting Started
 
-  Pull down the repo from github.com/mobremski/rbm_qa_create_users.
+  Pull down the repo from github.com/mobremski/rbm_qa_automation.
   Open the directory in your terminal and your preferred text editor.
   Install cucumber with `gem install cucumber` in the terminal from that directory.
   Run `bundle install` in the terminal from that directory.
@@ -23,10 +23,10 @@ Running the Test
 
 Built With
 
-  Cucumber
-  Rspec
-  Capybara
-  Capybara-webkit
+  Cucumber,
+  Rspec,
+  Capybara,
+  Capybara-webkit,
   Atom
 
 Version
